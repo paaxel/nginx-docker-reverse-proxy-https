@@ -1,0 +1,48 @@
+version: "3.1"
+services:
+ 
+  ngnix_rev_proxy:
+    image: nginx:latest
+    container_name: ngnix_rev_proxy
+    ports:
+      - target: 8084
+        published: {YOUR_EXPOSED_PORT_HTTP}
+        protocol: tcp
+        mode: host
+      - target: 9443
+        published: {YOUR_EXPOSED_PORT_HTTPS}
+        protocol: tcp
+        mode: host
+    restart: always
+    volumes:
+      - ./nginx_rev_proxy/conf/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx_rev_proxy/conf/proxy.conf:/etc/nginx/proxy.conf:ro
+      - ./certbot/www:/var/www/certbot/:ro
+      - ./certbot/conf/:/etc/nginx/ssl/:ro
+    depends_on:
+      backend-service:
+        condition: service_healthy
+    networks:
+      - servicenetwork
+
+
+  backend-service:
+    image: your-service-image:1.0.0
+    container_name: backend-service
+    restart: always
+    volumes:
+      - backend-data:/opt/
+    networks:
+      - servicenetwork
+    # leave port commented out because you want to expose the server via the reverse proxy
+    # ports:
+    #   - "8080:8080"
+  
+
+networks:
+  servicenetwork:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.248.9.0/24 # Avoid address collision with local network

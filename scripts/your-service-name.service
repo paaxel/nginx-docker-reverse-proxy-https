@@ -1,0 +1,15 @@
+[Unit]
+Description={YOUR-SERVICE-NAME} Service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+User={USER-USED-TO-START-APP}
+RestartSec=1
+ExecStart=/opt/{YOUR-SERVICE-NAME}/start.sh
+ExecStop=/opt/{YOUR-SERVICE-NAME}/stop.sh
+WorkingDirectory=/opt/{YOUR-SERVICE-NAME}
+
+[Install]
+WantedBy=multi-user.target
