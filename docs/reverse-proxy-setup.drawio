@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" modified="2024-12-31T12:08:29.889Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" etag="ZxsILMh7hakHtwncSEX0" version="23.1.5" type="device">
+  <diagram id="BvoDA4-X6VYwvUsZLv54" name="Page-1">
+    <mxGraphModel dx="2603" dy="1363" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gJVG62vpBUm8naZ11665-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#D86613;fontColor=#333333;gradientColor=default;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="310" y="180" width="730" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="gJVG62vpBUm8naZ11665-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#D86613;fontColor=#333333;gradientColor=default;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="400" y="300" width="580" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="ZcusJZVu_94WxtLjwKBi-13" value="Send Request (backend)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;fontSize=19;" parent="1" source="ZcusJZVu_94WxtLjwKBi-12" target="gJVG62vpBUm8naZ11665-9" edge="1">
+          <mxGeometry x="0.0047" relative="1" as="geometry">
+            <mxPoint x="689.5" y="140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="674" y="52" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZcusJZVu_94WxtLjwKBi-12" value="Client" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.management_console;fillColor=#D2D3D3;gradientColor=none;fontSize=19;" parent="1" vertex="1">
+          <mxGeometry x="394" y="30" width="63" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="gJVG62vpBUm8naZ11665-1" value="Backend Web Server" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/web_server.svg;fontSize=19;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="850" y="410" width="72" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="gJVG62vpBUm8naZ11665-6" value="Forward" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" edge="1" parent="1" source="gJVG62vpBUm8naZ11665-4" target="gJVG62vpBUm8naZ11665-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gJVG62vpBUm8naZ11665-4" value="Reverse Proxy" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=none;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://quiksite.com/wp-content/uploads/2016/09/Nginx-featured-logo.png;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="560" y="400" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="gJVG62vpBUm8naZ11665-7" value="Server (Ubuntu)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=27;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="325" y="190" width="225" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gJVG62vpBUm8naZ11665-8" value="Docker" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=27;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="425" y="310" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gJVG62vpBUm8naZ11665-10" value="Check and Forward" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" edge="1" parent="1" source="gJVG62vpBUm8naZ11665-9" target="gJVG62vpBUm8naZ11665-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gJVG62vpBUm8naZ11665-9" value="Firewall UFW" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/firewall.svg;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="650" y="163" width="48.8" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

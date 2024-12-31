@@ -18,6 +18,13 @@ Before beginning, ensure your development environment has the following installe
 
 To configure the service, you need to have **Docker** and **Docker Compose** installed. Follow the official guide at https://docs.docker.com/engine/install/. Once Docker is installed, ensure that the domain used to register the certificate points to the IP of the machine where the reverse proxy will be executed. Let's Encrypt does not support SSL/TLS certificates for IP addresses, so you will need a registered public domain. You will also need an email address to receive notifications about certificate expiration from Let's Encrypt. Let's Encrypt is a free service based on donations, so consider donating if your company can afford it.
 
+## Final setup schema
+
+In this image is the final configuration diagram of your service:
+
+![reverse-proxy-setup](./docs/reverse-proxy-setup.drawio.png)
+
+
 ### Download the files and save them in the installation directory
 
 At this point, it is recommended to create a directory where you can download the files present in the 'scripts' folder of this repository into the /opt/YOUR-SERVICE-NAME directory on your server.
