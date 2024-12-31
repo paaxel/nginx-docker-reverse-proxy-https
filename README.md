@@ -22,7 +22,7 @@ To configure the service, you need to have **Docker** and **Docker Compose** ins
 
 In this image is the final configuration diagram of your service:
 
-![reverse-proxy-setup](./docs/reverse-proxy-setup.drawio.png)
+![reverse-proxy-setup-img](./docs/reverse-proxy-setup.drawio.png)
 
 
 ### Download the files and save them in the installation directory
